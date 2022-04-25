@@ -7,6 +7,7 @@ namespace RapidPay.Storage
     {
         public DbSet<Card> Cards { get; set; }
         public DbSet<PayHistory> PayHistories { get; set; }
+        public DbSet<User> Users { get; set; }
         public RapidPayContext(DbContextOptions<RapidPayContext> options)
             : base(options)
         {
@@ -28,6 +29,14 @@ namespace RapidPay.Storage
             modelBuilder.Entity<Card>()
             .HasMany(c => c.PayHistories)
             .WithOne(e => e.Card);
+
+            modelBuilder.Entity<User>().HasKey(k => k.Id);
+            modelBuilder.Entity<User>().Property(k => k.Id).ValueGeneratedOnAdd().UseIdentityColumn();
+            modelBuilder.Entity<User>().Property(k => k.Username).IsRequired();
+            modelBuilder.Entity<User>().Property(k => k.Password).IsRequired();
+
+            modelBuilder.Entity<User>().HasData(
+            new User { Id = 1, Username = "user1", Password = "pwd12345" });
         }
     }
 }

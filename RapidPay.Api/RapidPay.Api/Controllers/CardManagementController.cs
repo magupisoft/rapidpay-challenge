@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RapidPay.CardManagement;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace RapidPay.Api.Controllers
 {
+    [Authorize]
     [Produces(MediaTypeNames.Application.Json)]
     [Route("api/[controller]")]
     [ApiController]
@@ -96,7 +98,7 @@ namespace RapidPay.Api.Controllers
                 var card = await _cardManagementService.GetCardBalance(cardNumber);
                 if(card == null)
                 {
-                    return NotFound();
+                    return NotFound(new { message = "Card with provided userName does not exist" });
                 }
 
                 return Ok(card);

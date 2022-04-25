@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = RapidPay.AuthenticationService
+build_property.ProjectDir = C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\

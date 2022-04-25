@@ -1,0 +1,15 @@
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\bin\Debug\netcoreapp3.1\RapidPay.AuthenticationService.deps.json
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\bin\Debug\netcoreapp3.1\RapidPay.AuthenticationService.dll
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\bin\Debug\netcoreapp3.1\RapidPay.AuthenticationService.pdb
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\bin\Debug\netcoreapp3.1\RapidPay.Domain.dll
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\bin\Debug\netcoreapp3.1\RapidPay.Storage.dll
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\bin\Debug\netcoreapp3.1\RapidPay.Storage.pdb
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\bin\Debug\netcoreapp3.1\RapidPay.Domain.pdb
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\obj\Debug\netcoreapp3.1\RapidPay.AuthenticationService.csproj.AssemblyReference.cache
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\obj\Debug\netcoreapp3.1\RapidPay.AuthenticationService.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\obj\Debug\netcoreapp3.1\RapidPay.AuthenticationService.AssemblyInfoInputs.cache
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\obj\Debug\netcoreapp3.1\RapidPay.AuthenticationService.AssemblyInfo.cs
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\obj\Debug\netcoreapp3.1\RapidPay.AuthenticationService.csproj.CoreCompileInputs.cache
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\obj\Debug\netcoreapp3.1\RapidPay.AuthenticationService.csproj.CopyComplete
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\obj\Debug\netcoreapp3.1\RapidPay.AuthenticationService.dll
+C:\dev\RapidPay\RapidPay.Api\RapidPay.AuthenticationService\obj\Debug\netcoreapp3.1\RapidPay.AuthenticationService.pdb
