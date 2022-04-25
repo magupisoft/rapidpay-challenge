@@ -1,0 +1,333 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Api\\RapidPay.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Api\\RapidPay.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Api\\RapidPay.Api.csproj",
+        "projectName": "RapidPay.Api",
+        "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Api\\RapidPay.Api.csproj",
+        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.CardManagement\\RapidPay.CardManagement.csproj": {
+                "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.CardManagement\\RapidPay.CardManagement.csproj"
+              },
+              "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\RapidPay.Domain.csproj": {
+                "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\RapidPay.Domain.csproj"
+              },
+              "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Storage\\RapidPay.Storage.csproj": {
+                "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Storage\\RapidPay.Storage.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.CardManagement\\RapidPay.CardManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.CardManagement\\RapidPay.CardManagement.csproj",
+        "projectName": "RapidPay.CardManagement",
+        "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.CardManagement\\RapidPay.CardManagement.csproj",
+        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.CardManagement\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\RapidPay.Domain.csproj": {
+                "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\RapidPay.Domain.csproj"
+              },
+              "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.PaymentFees\\RapidPay.PaymentFees.csproj": {
+                "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.PaymentFees\\RapidPay.PaymentFees.csproj"
+              },
+              "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Storage\\RapidPay.Storage.csproj": {
+                "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Storage\\RapidPay.Storage.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\RapidPay.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\RapidPay.Domain.csproj",
+        "projectName": "RapidPay.Domain",
+        "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\RapidPay.Domain.csproj",
+        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.PaymentFees\\RapidPay.PaymentFees.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.PaymentFees\\RapidPay.PaymentFees.csproj",
+        "projectName": "RapidPay.PaymentFees",
+        "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.PaymentFees\\RapidPay.PaymentFees.csproj",
+        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.PaymentFees\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Storage\\RapidPay.Storage.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Storage\\RapidPay.Storage.csproj",
+        "projectName": "RapidPay.Storage",
+        "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Storage\\RapidPay.Storage.csproj",
+        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Storage\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\RapidPay.Domain.csproj": {
+                "projectPath": "C:\\dev\\RapidPay\\RapidPay.Api\\RapidPay.Domain\\RapidPay.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
