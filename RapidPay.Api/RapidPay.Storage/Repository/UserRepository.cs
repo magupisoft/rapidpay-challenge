@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 
 namespace RapidPay.Storage.Repository
 {
-    public class UserRepository : BaseRepository<User>, IUserRepository
+    public class UserRepository : IUserRepository
     {
-        private new readonly RapidPayContext _context;
+        private readonly RapidPayContext _context;
 
-        public UserRepository(RapidPayContext context) : base(context)
+        public UserRepository(RapidPayContext context)
         {
             _context = context;
         }

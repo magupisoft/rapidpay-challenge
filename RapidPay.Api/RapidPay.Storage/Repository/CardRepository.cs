@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace RapidPay.Storage.Repository
 {
-    public class CardRepository : BaseRepository<Card>, ICardRepository
+    public class CardRepository : ICardRepository
     {
-        private new readonly RapidPayContext _context;
+        private readonly RapidPayContext _context;
 
-        public CardRepository(RapidPayContext context) : base(context)
+        public CardRepository(RapidPayContext context)
         {
             _context = context;
         }
