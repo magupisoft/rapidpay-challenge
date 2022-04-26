@@ -18,16 +18,15 @@ namespace RapidPay.AuthenticationService
         {
             var user = await _userRepository.AuthenticateAsync(username, password);
             AuthenticatedUserResponse response = null;
-            if (user != null)
+            if (user == null) return (response, null);
+            
+            var credentials = $"{username}:{password}";
+            byte[] credentialsAsBytes = Encoding.UTF8.GetBytes(credentials);
+            response = new AuthenticatedUserResponse
             {
-                user.Password = null;
-                var credentials = $"{username}:{password}";
-                byte[] credentialsAsBytes = Encoding.UTF8.GetBytes(credentials);
-                response = new AuthenticatedUserResponse
-                {
-                    AuthorizarionHeader = Convert.ToBase64String(credentialsAsBytes)
-                };
-            }
+                AuthorizarionHeader = Convert.ToBase64String(credentialsAsBytes)
+            };
+            
             return (response, user);
         }
     }
