@@ -4,11 +4,10 @@ Manuel Gutierrez Pineda
 Code Challenge interview
 
 
-Instructions
+## Instructions
 
-Run the solution for generating the databases using the following default connection string:
-"Server=(local);Database=RapidPayDb;Trusted_Connection=True;"
+- Run the solution for generating the databases using the following default connection string:
+   > "Server=(local);Database=RapidPayDb;Trusted_Connection=True;"
 
-Once the swagger UI is opened you can login with the default user:
-
-Username = "user1", Password = "pwd12345"
+- Once the swagger UI is opened you can login with the default user:
+   > Username = "user1", Password = "pwd12345"
