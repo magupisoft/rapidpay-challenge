@@ -1,8 +1,5 @@
-﻿using RapidPay.Domain.Responses;
-using RapidPay.Storage.DbModel;
+﻿using RapidPay.Storage.DbModel;
 using RapidPay.Storage.Repository;
-using System;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RapidPay.AuthenticationService
@@ -14,20 +11,12 @@ namespace RapidPay.AuthenticationService
         {
             _userRepository = userRepository;
         }
-        public async Task<(AuthenticatedUserResponse authenticatedUser, User user)> AuthenticateAsync(string username, string password)
+        public async Task<User> AuthenticateAsync(string username, string password)
         {
             var user = await _userRepository.AuthenticateAsync(username, password);
-            AuthenticatedUserResponse response = null;
-            if (user == null) return (response, null);
+            if (user == null) return null;            
             
-            var credentials = $"{username}:{password}";
-            byte[] credentialsAsBytes = Encoding.UTF8.GetBytes(credentials);
-            response = new AuthenticatedUserResponse
-            {
-                AuthorizarionHeader = Convert.ToBase64String(credentialsAsBytes)
-            };
-            
-            return (response, user);
+            return user;
         }
     }
 }

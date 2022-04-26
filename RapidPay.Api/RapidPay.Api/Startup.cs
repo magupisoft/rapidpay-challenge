@@ -9,6 +9,7 @@ using Microsoft.OpenApi.Models;
 using RapidPay.Api.Handlers;
 using RapidPay.AuthenticationService;
 using RapidPay.CardManagement;
+using RapidPay.PaymentFees;
 using RapidPay.Storage;
 using RapidPay.Storage.Repository;
 
@@ -71,6 +72,7 @@ namespace RapidPay.Api
             services.AddScoped<ICardManagementService, CardManagementService>();
             services.AddScoped<ICardRepository, CardRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IPaymentFeeRepository, PaymentFeeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

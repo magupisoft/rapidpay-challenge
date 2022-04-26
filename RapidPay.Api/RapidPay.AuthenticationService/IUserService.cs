@@ -6,6 +6,6 @@ namespace RapidPay.AuthenticationService
 {
     public interface IUserService
     {
-        Task<(AuthenticatedUserResponse authenticatedUser, User user)> AuthenticateAsync(string username, string password);
+        Task<User> AuthenticateAsync(string username, string password);
     }
 }

@@ -10,6 +10,8 @@ namespace RapidPay.Storage.Repository
 
         Task<decimal?> GetCardBalance(string cardNumber);
 
-        Task<bool> CardPayment(string cardNumber, decimal payment);
+        Task<bool> SaveCardPaymentTransaction(string cardNumber, decimal payment, decimal fee);
+
+        Task<bool> UpdateBalance(string cardNumber, decimal amount);
     }
 }

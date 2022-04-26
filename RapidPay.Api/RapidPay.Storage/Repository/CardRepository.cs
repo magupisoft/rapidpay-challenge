@@ -2,7 +2,6 @@
 using RapidPay.Domain.Requests;
 using RapidPay.Domain.Responses;
 using RapidPay.Storage.DbModel;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace RapidPay.Storage.Repository
@@ -16,9 +15,23 @@ namespace RapidPay.Storage.Repository
             _context = context;
         }
 
-        public Task<bool> CardPayment(string cardNumber, decimal payment)
+        public async Task<bool> SaveCardPaymentTransaction(string cardNumber, decimal payment, decimal fee)
         {
-            throw new System.NotImplementedException();
+            var card = await GetCard(cardNumber);
+            if (card == null)
+            {
+                return false;
+            }
+            var payTransaction = new PayHistory
+            {
+                Payment = payment,
+                Fee = fee,
+                PayDate = System.DateTime.Now,
+                CardId = card.Id,
+            };
+            _context.Add(payTransaction);
+            await _context.SaveChangesAsync();
+            return true; ;
         }
 
         public async Task<CreateCardResponse> CreateNewCardAsync(CreateCardRequest request)
@@ -33,14 +46,31 @@ namespace RapidPay.Storage.Repository
             return new CreateCardResponse() { CardId = newCard.Id, CardNumber = newCard.Number };
         }
 
+        public async Task<bool> UpdateBalance(string cardNumber, decimal amount)
+        {
+            var card = await GetCard(cardNumber);
+            if (card == null)
+            {
+                return false;
+            }
+            card.Balance -= amount;
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
         public async Task<decimal?> GetCardBalance(string cardNumber)
         {
-            var card = await _context.Cards.FirstOrDefaultAsync(x => x.Number == cardNumber);
+            var card = await GetCard(cardNumber);
             if (card == null)
             {
                 return null;
             }
             return card.Balance;
+        }
+
+        private async Task<Card> GetCard(string cardNumber)
+        {
+            return await _context.Cards.FirstOrDefaultAsync(x => x.Number == cardNumber);
         }
     }
 }

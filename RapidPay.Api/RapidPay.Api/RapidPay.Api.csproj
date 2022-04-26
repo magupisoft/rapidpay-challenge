@@ -18,6 +18,7 @@
     <ProjectReference Include="..\RapidPay.AuthenticationService\RapidPay.AuthenticationService.csproj" />
     <ProjectReference Include="..\RapidPay.CardManagement\RapidPay.CardManagement.csproj" />
     <ProjectReference Include="..\RapidPay.Domain\RapidPay.Domain.csproj" />
+    <ProjectReference Include="..\RapidPay.PaymentFees\RapidPay.PaymentFees.csproj" />
     <ProjectReference Include="..\RapidPay.Storage\RapidPay.Storage.csproj" />
   </ItemGroup>
 

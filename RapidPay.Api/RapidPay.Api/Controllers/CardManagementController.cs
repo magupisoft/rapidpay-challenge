@@ -49,8 +49,9 @@ namespace RapidPay.Api.Controllers
             }
             catch (System.Exception ex)
             {
-                _logger.LogError($"Error when creating new card with number: {request.Number}", ex);
-                return this.StatusCode(StatusCodes.Status500InternalServerError, ex);
+                var logError = $"Error when creating new card with number: {request.Number}. Error message: {ex.Message}";
+                _logger.LogError(logError, ex);
+                return this.StatusCode(StatusCodes.Status500InternalServerError, logError);
             }
             
         }
@@ -58,23 +59,39 @@ namespace RapidPay.Api.Controllers
         /// <summary>
         /// PUT: Execute a payment using a given card number and the payment
         /// </summary>
-        /// <param name="cardNumber">Card Number</param>
-        /// <param name="amount">Amount to be paid</param>
+        /// <param name="paymentRequest">Card Number and Amount to be paid</param>
         /// <returns></returns>
-        [HttpPut("card/{cardNumber}/payment")]
+        [HttpPut("card/payment")]
         [ProducesResponseType(StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<CardPaymentResponse>> PaymentAsync(
-            [FromRoute] string cardNumber, 
-            [FromRoute] decimal amount)
+            [FromBody] DoPaymentRequest paymentRequest
+        )
         {
-            if (string.IsNullOrEmpty(cardNumber) || cardNumber.Length != 15 || amount <= 0)
+            if (string.IsNullOrEmpty(paymentRequest.CardNumber) || 
+                paymentRequest.CardNumber.Length != 15 ||
+                paymentRequest.Amount <= 0
+            )
             {
                 return BadRequest();
             }
-            var response = new CardPaymentResponse();
+
+            CardPaymentResponse response;
+            try
+            {
+                response = await _cardManagementService.ProcessPayment(paymentRequest);
+            }
+            catch (System.Exception ex)
+            {
+                var logError = 
+                    $"Error doing a card payment with number: {paymentRequest.CardNumber} " +
+                    $"and amount: {paymentRequest.Amount}. " +
+                    $"Error message: {ex.Message}";
+                _logger.LogError(logError, ex);
+                return this.StatusCode(StatusCodes.Status500InternalServerError, logError);
+            }
+            
             return Accepted(response);
         }
 
@@ -105,8 +122,9 @@ namespace RapidPay.Api.Controllers
             }
             catch (System.Exception ex)
             {
-                _logger.LogError($"Error retrieving card with number: {cardNumber}", ex);
-                return this.StatusCode(StatusCodes.Status500InternalServerError, ex);
+                var logError = $"Error retrieving card with number: {cardNumber}. Error message: {ex.Message}";
+                _logger.LogError(logError, ex);
+                return this.StatusCode(StatusCodes.Status500InternalServerError, logError);
             }
           
         }
